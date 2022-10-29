@@ -62,12 +62,25 @@ async def _human_time_duration(seconds):
 async def start_(client: Client, message: Message):
     await message.reply_photo(
         photo=f"{BOT_PHOTO}",
-        caption=f"""✨ **مرحبا عزيزي » {message.from_user.mention()} !**\n
-💭 **᥀︙انا بوت استطيع تشغيل الاغاني والموسيقى في المكالمات  الصوتية! 
+        caption=f"""
 
-᥀︙ لمعرفة اوامر هذا البوت اضغط على » اوامر التشغيل!
+‹'' 🤖┆انا بوت تشغيل الاغاني والفديوهات ⤹•
 
-᥀︙ لمعرفة طريقة تشغيل هذا البوت اضغط على » طريقة التشغيل!
+
+‹'' 🎸┆ اقوم بالتشغيل في القنوات مباشرة ⤹•
+
+
+‹'' 🎥┆يمكنني تشغيل الفديوهات ⤹•
+
+
+‹'' ⚙┆لكي اعمل بشكل صحيح اتبع ⤹•
+
+
+‹'' 🎖┆قم بترقيتي مشرف في ⤹• الجروب  ⤹•
+
+
+‹'' 🔦┆لمعرفه المزيد اضغط علي زر الاوامر ⤹•
+
 """,
         reply_markup=InlineKeyboardMarkup(
             [
@@ -76,20 +89,20 @@ async def start_(client: Client, message: Message):
                     InlineKeyboardButton("", callback_data="cbhowtouse")
                     ],
                 [
-                    InlineKeyboardButton("‹ اوامر التشغيل › ", callback_data="cbcmds"),
-                    InlineKeyboardButton("❤️ المطور", url=f"https://t.me/{OWNER_NAME}"),
+                    InlineKeyboardButton("‹ قـائـمـة الـتـشـغـيـل ›", callback_data="cbcmds"),
+                    InlineKeyboardButton("‹ مـالـڪ الـبـوت ›", url=f"https://t.me/{OWNER_NAME}"),
                 ],
                 [
                     InlineKeyboardButton(
-                        "‹ كروب الدعم › ", url=f"https://t.me/{GROUP_SUPPORT}"
+                        "‹ جـروب الـدعـم ›", url=f"https://t.me/{GROUP_SUPPORT}"
                     ),
                     InlineKeyboardButton(
-                        "‹ لتنصيب بوت ›", url=f"https://t.me/EITHON1/819"
+                        "‹لـتـنـصـيـب بـوتـڪ›", url=f"https://t.me/SEMO8L/18"
                     ),
                 ],
                 [
                     InlineKeyboardButton(
-                        "اضـف البـوت لمجمـوعتـك ✅",
+                        "‹ اضـف الـبـوت لـمـجـمـوعتـڪ ›",
                         url=f"https://t.me/{BOT_USERNAME}?startgroup=true"
                     )
                 ],
@@ -98,19 +111,19 @@ async def start_(client: Client, message: Message):
     )
 
 
-@Client.on_message(command(["مبرمج السورس", f"ؤمن", f"ورس", f"السورس"]) & filters.group & ~filters.edited)
+@Client.on_message(command(["مبرمج السورس", f"سورس", f"المالك", f"السورس"]) & filters.group & ~filters.edited)
 async def start(client: Client, message: Message):
     await message.reply_photo(
-        photo=f"https://telegra.ph/file/8efbe93b81985bb648d95.jpg",
-        caption=f"""Programmer [EITHON](https://t.me/EITHON1) 𖡼\nᴛᴏ ᴄᴏᴍᴍụɴɪᴄᴀᴛᴇ ᴛᴏɢᴇᴛʜᴇʀ 𖡼\nғᴏʟʟᴏᴡ ᴛʜᴇ ʙụᴛᴛᴏɴѕ ʟᴏᴡᴇʀ 𖡼""",
+        photo=f"https://telegra.ph/file/3f6aa941e62188ac99db4.jpg",
+        caption=f"""Programmer [‹ 𝚂𝙾𝚄𝚁𝙲𝙴 𝚂𝙴𝙼𝙾 ›](https://t.me/SEMO8L) 𖡼\nᴛᴏ ᴄᴏᴍᴍụɴɪᴄᴀᴛᴇ ᴛᴏɢᴇᴛʜᴇʀ 𖡼\nғᴏʟʟᴏᴡ ᴛʜᴇ ʙụᴛᴛᴏɴѕ ʟᴏᴡᴇʀ 𖡼""",
         reply_markup=InlineKeyboardMarkup(
          [
             [
-                InlineKeyboardButton("℡ ᯓ Ξ𝗜𝗧𝗛𝗢𝗡™ ايثون", url=f"https://t.me/EITHON1"),
+                InlineKeyboardButton("{ 𝚂𝙾𝚄𝚁𝙲𝙴 𝚂𝙴𝙼𝙾 }", url=f"https://t.me/EITHON1"),
             ],
             [
                 InlineKeyboardButton(
-                    "-محمد .", url=f"https://t.me/M_Z_Z_N"
+                    "مـبـرمـجہ الـبـوت", url=f"https://t.me/DEV_SAMIR"
                 ),
             ],
             [
@@ -120,15 +133,15 @@ async def start(client: Client, message: Message):
      )
   )
 
-@Client.on_message(command(["لمطور", "المطور"]) & filters.group & ~filters.edited)
+@Client.on_message(command(["المبرمج", "المطور"]) & filters.group & ~filters.edited)
 async def help(client: Client, message: Message):
     await message.reply_photo(
         photo=f"{DEV_PHOTO}",
-        caption=f"""◍ الاول : هو مطور السورس \n◍ الثاني : هو مطور البوت\n√""",
+        caption=f"""◍ الاول : هـو مـبـرمـجہ الـسـورس \n◍ الثاني : هو مـطـور الـبـوت\n√""",
         reply_markup=InlineKeyboardMarkup(
          [
             [
-                InlineKeyboardButton("𓌹℡ ᯓ Ξ𝗜𝗧𝗛𝗢𝗡™ ايثون", url=f"https://t.me/EITHON1"),
+                InlineKeyboardButton("[ 𝚂𝙾𝚄𝚁𝙲𝙴 𝚂𝙴𝙼𝙾 ]", url=f"https://t.me/SEMO8L"),
             ],
             [
                 InlineKeyboardButton(
@@ -136,7 +149,7 @@ async def help(client: Client, message: Message):
                 ),
             ],
             [
-                InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{BOT_USERNAME}?startgroup=true"),
+                InlineKeyboardButton("♡ ضيـف البـوت لمجمـوعتـك ♡", url=f"https://t.me/{BOT_USERNAME}?startgroup=true"),
             ]
          ]
      )
@@ -198,8 +211,8 @@ async def new_chat(c: Client, m: Message):
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton("‹ قناة البوت ›", url=f"https://t.me/{UPDATES_CHANNEL}"),
-                            InlineKeyboardButton("‹ كروب الدعم ›", url=f"https://t.me/{GROUP_SUPPORT}")
+                            InlineKeyboardButton("‹ قـنـاة الـسـورس ›", url=f"https://t.me/SEMO8L"),
+                            InlineKeyboardButton("‹ جـروب الـدعـم ›", url=f"https://t.me/{GROUP_SUPPORT}")
                         ],
                         [
                             InlineKeyboardButton(
@@ -207,7 +220,7 @@ async def new_chat(c: Client, m: Message):
                         ],
                         [
                             InlineKeyboardButton(
-                        "♡اضـف الـبـوت لـمـجـمـوعـتـك♡",
+                        "♡ اضـف الـبـوت لـمـجـمـوعـتـك ♡",
                         url=f'https://t.me/{BOT_USERNAME}?startgroup=true'),
                         ],
                     ]
